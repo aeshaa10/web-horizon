@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Fredoka;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #27374D; /* Deep Blue Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-container {
+    background-color: #DDE6ED; /* Light Blue Background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+  }
+
+  h2 {
+    color: #526D82; /* Dark blue for the heading */
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #526D82; /* Medium blue for labels */
+  }
+
+  input[type="text"], input[type="password"], input[type="tel"], input[type="number"], select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #9DB2BF; /* Lighter blue border for inputs */
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  input[type="text"]:focus, input[type="password"]:focus, input[type="tel"]:focus, input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: #526D82; /* Medium blue on focus */
+    box-shadow: 0 0 5px rgba(82, 109, 130, 0.5); /* Blue focus shadow */
+  }
+
+  .login-btn {
+    background-color: #526D82; /* Complementary golden yellow button */
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-btn:hover {
+    background-color: #D4A627;
+    color: #27374D;
+    /* Darker golden yellow on hover */
+  }

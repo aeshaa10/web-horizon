@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Page</title>
+    <script src="https://kit.fontawesome.com/9ae74536ce.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Fredoka, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #27374D; /* Deep Blue Background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .donate-container {
+            background-color: #DDE6ED; /* Light Blue Background */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #27374D; /* Dark blue for the heading */
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-weight: 500;
+            font-size: 40px;
+            font-family:Fredoka ;
+        }
+        h2:hover{
+            color: #D4A627;
+        }
+
+        .donate-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            text-align: left;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-family: fredoka;
+            color: #526D82; /* Medium blue for labels */
+        }
+
+        input[type="text"], input[type="tel"], input[type="number"], textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #9DB2BF; /* Lighter blue border for inputs */
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #F1F6F9; /* Slightly lighter background for input fields */
+        }
+
+        input[type="text"]:focus, input[type="tel"]:focus, input[type="number"]:focus, textarea:focus {
+            outline: none;
+            border-color: #526D82; /* Medium blue on focus */
+            box-shadow: 0 0 5px rgba(82, 109, 130, 0.5); /* Blue focus shadow */
+        }
+
+        .donate-btn {
+            background-color: #27374D; /* Complementary gold color */
+            color: #fff;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .donate-btn:hover {
+            background-color: #D4A627; /* Darker gold on hover */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="donate-container">
+        <h2><i class="fa-regular fa-face-smile"></i>&nbsp;Donate Here!!</h2>
+        <form class="donate-form" action="#" method="POST">
+            <label for="community-name">Community/Organization Name:</label>
+            <input type="text" id="community-name" name="community-name" placeholder="Enter community name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Enter city" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter address" rows="3" required></textarea>
+
+            <label for="food-capacity">Food Enough for How Many People:</label>
+            <input type="number" id="food-capacity" name="food-capacity" placeholder="Enter number" required>
+
+            <button type="submit" class="donate-btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

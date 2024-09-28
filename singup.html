@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Nourish Nation</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Volunteer Registration</h2>
+    <form class="login-form" onsubmit="checkValidation(event)">
+
+      <label for="volunteerName">Volunteer Name</label>
+      <input type="text" id="volunteerName" name="volunteerName" placeholder="Enter your Name" required>
+
+      <label for="phoneNumber">Phone Number</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your Phone Number" required>
+
+      <label for="cityname">City</label>
+      <select id="cityname" name="cityname" required>
+        <option value="">Select your City</option>
+        <option value="Rajkot">Rajkot</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Dahod">Dahod</option>
+        <option value="Dang">Dang</option>
+        <option value="Jamnagar">Jamnagar</option>
+        <!-- Add more cities as needed -->
+      </select>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" name="usename" placeholder="Enter username" required>
+
+      <label for="createPassword">Create Password</label>
+      <input type="password" id="createPassword" name="createPassword" placeholder="Create a Password" required>
+
+      <button type="submit" class="login-btn">Register</button>
+    </form>
+  </div>
+
+  <script>
+    function checkValidation(event) {
+      event.preventDefault(); // Prevent the form from submitting immediately
+
+      // Get form values
+      const name = document.getElementById('volunteerName').value.trim();
+      const phone = document.getElementById('phoneNumber').value.trim();
+      const city = document.getElementById('cityname').value;
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('createPassword').value.trim();
+
+      // Name Validation: Ensure name is not empty
+      if (name === "") {
+        alert("Please enter your name.");
+        return;
+      }
+
+      // Phone Number Validation: Ensure phone is a valid 10-digit number
+      const phonePattern = /^[0-9]{10}$/;
+      if (!phonePattern.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+      }
+
+      // City Validation: Ensure city is selected
+      if (city === "") {
+        alert("Please select your city.");
+        return;
+      }
+
+      // Username Validation: Ensure username is at least 4 characters
+      if (username.length < 4) {
+        alert("Username must be at least 4 characters long.");
+        return;
+      }
+
+      // Password Validation: Ensure password is at least 8 characters
+      if (password.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return;
+      }
+
+      // If all validations pass, redirect to dashboard
+      localStorage.setItem('isLoggedIn', 'true');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

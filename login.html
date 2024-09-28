@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Nourish Nation</title>
+  <link rel="stylesheet" href="login.css">
+  <script>
+    function checkValidation(event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get the values from the input fields
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Check if the username and password are both 'admin'
+      if (username === 'admin' && password === '12345678') {
+        // Redirect to another page (e.g., dashboard.html)
+        localStorage.setItem('isLoggedIn', 'true');
+        window.location.href = 'index.html'; // Change to your target page
+      } else {
+        // Show an alert if the credentials are incorrect
+        alert('Invalid username or password. Please try again.');
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form class="login-form" onsubmit="checkValidation(event)">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your Username" required>
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+      
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+  </div>
+</body>
+</html>
