@@ -139,7 +139,7 @@
       </div>
     </div> -->
 
-    <div class="row" style=" background-color: #9DB2BF; margin-top: 40px; margin-bottom: 30px; margin-left: 10px; margin-right: 10px;" >
+    <div class="row" style=" background-color: #9DB2BF; margin-top: 10px; margin-bottom: 10px; margin-left: 10px; margin-right: 10px;" >
       <div class="col-lg-4">
         <img class="rounded-circle" src="1.jpg" alt="Generic placeholder image" width="140" height="140">
         <p> Feed Forward is a dedicated non-governmental organization (NGO) focused on addressing food insecurity and connecting volunteers with those in need. Our mission is to bridge the gap between generous donors and individuals facing food shortages. Through a network of compassionate volunteers, we efficiently collect, package, and distribute food to families and individuals in our community. We believe that everyone deserves access to nutritious meals, and our initiatives aim to ensure that no one goes hungry.</p>
@@ -183,32 +183,5 @@
             location.reload();
         });
     </script>
-</body>
-</html>
-
-    <script>
-        // Check if the user is logged in by checking localStorage
-        const isLoggedIn = localStorage.getItem('isLoggedIn');
-  
-        if (isLoggedIn) {
-          // Hide login and signup buttons
-          document.querySelector('.auth-buttons').style.display = 'none';
-  
-          // Show the user image
-          document.getElementById('userImage').style.display = 'block';
-        }
-
-        // Sign Out functionality
-        document.getElementById('signOutBtn').addEventListener('click', function() {
-            // Remove the login status from localStorage
-            localStorage.removeItem('isLoggedIn');
-            // Reload the page
-            location.reload();
-        });
-    </script>
-
-
-
-
 </body>
 </html>
