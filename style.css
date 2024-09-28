@@ -11,343 +11,304 @@ D4A627*/
 
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Fredoka, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: #27374D; /* Blue theme */
+  padding: 10px 50px;
+  position: sticky;
+}
+
+.logo h1 {
+  letter-spacing: 1.5px;
+  color: #44b97d;
+  font-size: 24px;
+  font-weight: bolder;
+}
+ .logo.image{
+  height: 50px;
+  width: 50px;
+
+}
+ 
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+  transition: color 0.3s ease;
+  
+}
+
+nav ul li a:hover {
+  /* color: #B0E0E6; Light blue on hover */
+  color: #D4A627;
+}
+
+
+
+.auth-buttons .signup {
+  background-color: #fff;
+  color: #27374D;
+  font-weight: bold;
+}
+.auth-buttons .login {
+  background-color: #fff;
+  color: #27374D;
+  font-weight: bold;
+}
+
+.auth-buttons button:hover {
+  /* background-color: #B0E0E6; Light blue on hover */
+  background-color: #D4A627;
+  color: #ffff;
+  font-weight: bold;
+}
+
+.auth-buttons .signup:hover {
+  background-color: #D4A627;
+  color: #ffff;
+  font-weight: bold;
+}
+.auth-buttons .login:hover {
+  background-color: #D4A627;
+  color: #ffff;
+  font-weight: bold;
+}
+
+/* .user-image {
+  border-radius: 50%;
+  d1
+  isplay: none; /* Hidden initially */
+
+
+  html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Fredoka, sans-serif;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    background-color: #27374D; /* Blue theme */
-    padding: 10px 50px;
-    position: sticky;
-  }
-  
-  .logo h1 {
-    letter-spacing: 1.5px;
-    color: #44b97d;
-    font-size: 24px;
-    font-weight: bolder;
-  }
-   .logo.image{
-    height: 50px;
-    width: 50px;
+}
 
-  }
-   
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 19px;
-    transition: color 0.3s ease;
-    
-  }
-  
-  nav ul li a:hover {
-    /* color: #B0E0E6; Light blue on hover */
-    color: #D4A627;
-  }
-  
-  /* .auth-buttons {
-    display: flex;
-  }
-  
-  .auth-buttons button {
-    background-color: #fff;
-    color: #27374D;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-left: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  } */
-  
-  .auth-buttons .signup {
-    background-color: #fff;
-    color: #27374D;
-    font-weight: bold;
-  }
-  .auth-buttons .login {
-    background-color: #fff;
-    color: #27374D;
-    font-weight: bold;
-  }
-  
-  .auth-buttons button:hover {
-    /* background-color: #B0E0E6; Light blue on hover */
-    background-color: #D4A627;
-    color: #ffff;
-    font-weight: bold;
-  }
-  
-  .auth-buttons .signup:hover {
-    background-color: #D4A627;
-    color: #ffff;
-    font-weight: bold;
-  }
-  .auth-buttons .login:hover {
-    background-color: #D4A627;
-    color: #ffff;
-    font-weight: bold;
-  }
-  
-  /* .user-image {
-    border-radius: 50%;
-    d1
-    isplay: none; /* Hidden initially */
+.carousel {
+    height: 100%;
+    margin-bottom: -20px; /* Full height of the viewport */
+}
 
+.carousel-item {
+    height: 100%; /* Full height for carousel items */
+}
 
-    html, body {
-      height: 100%;
-      margin: 0;
-  }
+.carousel-item img {
+    width: 100%; /* Full width for images */
+    height: 100%; /* Full height for images */
+    object-fit: cover; /* Ensure the image covers the entire item */
+}
 
-  .carousel {
-      height: 100%;
-      margin-bottom: -20px; /* Full height of the viewport */
-  }
+  Common container for auth buttons and user image
+      .auth-container {
+          position: relative;            margin-top: 10px;
+      }
 
-  .carousel-item {
-      height: 100%; /* Full height for carousel items */
-  }
-
-  .carousel-item img {
-      width: 100%; /* Full width for images */
-      height: 100%; /* Full height for images */
-      object-fit: cover; /* Ensure the image covers the entire item */
-  }
-
-    Common container for auth buttons and user image
-        .auth-container {
-            position: relative;            margin-top: 10px;
-        }
-
-        .auth-buttons {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            align-content: center;
-            gap: 10px;
-        }
-        header{
+      .auth-buttons {
           display: flex;
-          justify-content: space-between;
           align-items: center;
+          justify-content: center;
+
           align-content: center;
-        
-        }
-        .auth-buttons button {
-          background-color: #fff;
-          color: #27374D;
-          border: none;
-          padding: 10px 20px;
-          font-size: 14px;
+          gap: 10px;
+      }
+      header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+      
+      }
+      .auth-buttons button {
+        background-color: #fff;
+        color: #27374D;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+
+        margin-left: 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      .user-image {
           cursor: pointer;
+          display: none; 
+          border-radius: 50%;
+      }
 
-          margin-left: 10px;
-          border-radius: 4px;
-          transition: background-color 0.3s ease;
-        }
+      .dropdown {
+          position: relative;
+          display: inline-block;
+      }
 
-        .user-image {
-            cursor: pointer;
-            display: none; 
-            border-radius: 50%;
-        }
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          right: 0;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+      .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+      }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
+      .dropdown-content a:hover {
+          background-color: #f1f1f1;
+      }
 
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-    /* #carouselExampleSlidesOnly {
-      width: 50vw; 
-      height: 50vh; 
-      margin: auto; 
-    }
-    
-    .carousel-item {
-      background-color: #f0f0f0; 
-      width: 100%;
-      height: 100%;
-    }
-    
-    .carousel-inner img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%; 
-    } */
-    
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
 
 
-
-    .main-section {
-      padding: 50px 100px;
-      background-color: #DDE6ED;
-      text-align: center;
-  }
-  .main-section h2 {
-      font-size: 36px;
-      color: #27374D;
-      font-weight: 550;
-      font-family: Fredoka, sans-serif;
-  }
-  .main-section p {
-      font-size: 18px;
-      color: #27374D;
-      font-weight: 400;
-      margin-top: 20px;
-      font-family: Fredoka, sans-serif;
-
-  }
-  .about-us-section {
-      padding: 50px 100px;
-      background-color: #cedae3;
-      text-align: center;
-      color: #27374D;
-      
-      font-weight: 400;
-      font-family: Fredoka, sans-serif;
-
-  }
-  .about-us-section h2 {
-      font-size: 36px;
-      color: #27374D;
-      font-weight: 550;
-  }
-  .about-us-section p {
-      font-size: 18px;
-      margin-top: 20px;
-  }
-  /* #myBtn {
-    color: white;            
-    padding: 10px 20px;        
-    border: none;              
-    cursor: pointer;            
-    font-size: 16px;           
-  }
-  .cards-section {
-      padding: 50px 100px;
-      background-color: #DDE6ED;
-      display: flex;
-      justify-content: space-around;
-  }
-  .card {
-      background-color: white;
-      width: 300px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .card img {
-      width: 100%;
-      border-radius: 8px;
-      height: 200px;
-  }
-  .card h3 {
-      color: #27374D;
-      font-size: 24px;
-      margin-top: 15px;
-  }
-  .card p {
-      color: #526D82;
-      font-size: 16px;
-      margin-top: 10px;
-  } */
-  footer {
-      background-color: #27374D;
-      color: white;
-      padding: 20px 0;
-      text-align: center;}
-
-      /* body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #DDE6ED; 
-        font-family: Arial, sans-serif;
-    } */
-    
-    /* .container {
-        display: flex;
-        gap: 20px;
-    }
-    
-    .card {
-        width: 200px; 
-        height: 200px; 
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    } */
-/*     
-    #card1 {
-        background-color: #27374D; 
-        color: #D4A627; 
-    }
-    
-    #card2 {
-        background-color: #526D82; 
-        color: #D4A627;
-    }
-    
-    #card3 {
-        background-color: #9DB2BF; 
-        color: #D4A627; 
-    } */
-    
-    
-
-
-      
-      
   
+
+
+
+  .main-section {
+    padding: 50px 100px;
+    background-color: #DDE6ED;
+    text-align: center;
+}
+.main-section h2 {
+    font-size: 36px;
+    color: #27374D;
+    font-weight: 550;
+    font-family: Fredoka, sans-serif;
+}
+.main-section p {
+    font-size: 18px;
+    color: #27374D;
+    font-weight: 400;
+    margin-top: 20px;
+    font-family: Fredoka, sans-serif;
+
+}
+.about-us-section {
+    padding: 50px 100px;
+    background-color: #cedae3;
+    text-align: center;
+    color: #27374D;
+    
+    font-weight: 400;
+    font-family: Fredoka, sans-serif;
+
+}
+.about-us-section h2 {
+    font-size: 36px;
+    color: #27374D;
+    font-weight: 550;
+}
+.about-us-section p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #27374D;
+    color: white;
+    padding: 20px 0;
+    text-align: center;}
+
+
+
+  @media (max-width: 1200px) {
+      header {
+          padding: 10px 30px;
+      }
+      .main-section, .about-us-section {
+          padding: 30px 50px;
+      }
+      .card {
+          width: 250px;
+      }
+  }
+  
+  @media (max-width: 992px) {
+      nav ul {
+          flex-direction: column;
+          align-items: center;
+      }
+      nav ul li {
+          margin-right: 0;
+          margin-bottom: 10px;
+      }
+      .auth-buttons {
+          flex-direction: column;
+          gap: 5px;
+      }
+      .main-section, .about-us-section {
+          padding: 20px 30px;
+      }
+      .cards-section {
+          flex-direction: column;
+          align-items: center;
+      }
+      .card {
+          width: 80%;
+          margin-bottom: 20px;
+      }
+  }
+  
+  @media (max-width: 768px) {
+      .main-section h2, .about-us-section h2 {
+          font-size: 28px;
+      }
+      .main-section p, .about-us-section p {
+          font-size: 16px;
+      }
+      header {
+          flex-direction: column;
+          align-items: center;
+      }
+      .logo h1 {
+          font-size: 20px;
+      }
+      .auth-buttons {
+          margin-top: 10px;
+      }
+  }
+  
+  @media (max-width: 576px) {
+      .main-section h2, .about-us-section h2 {
+          font-size: 24px;
+      }
+      .main-section p, .about-us-section p {
+          font-size: 14px;
+      }
+      .card {
+          width: 90%;
+      }
+  }
+
+    

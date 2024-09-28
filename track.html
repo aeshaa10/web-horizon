@@ -18,18 +18,93 @@
         }
 
         body {
-            background-color: #27374D; /* Deep Blue Background */
-            padding: 20px;
+            background-color:#9DB2BF ; /* Deep Blue Background */
+            padding: 0px;
         }
+        
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color: #27374D; /* Blue theme */
+    padding: 10px 50px;
+    position: sticky;
+  }
+  
+  .logo h1 {
+    letter-spacing: 1.5px;
+    color: #44b97d;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+   .logo.image{
+    height: 50px;
+    width: 50px;
+
+  }
+   
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    transition: color 0.3s ease;
+    
+  }
+  
+  nav ul li a:hover {
+    /* color: #B0E0E6; Light blue on hover */
+    color: #D4A627;
+  }
+  
+
+  
+  .auth-buttons .signup {
+    background-color: #fff;
+    color: #27374D;
+    font-weight: bold;
+  }
+  .auth-buttons .login {
+    background-color: #fff;
+    color: #27374D;
+    font-weight: bold;
+  }
+  
+  .auth-buttons button:hover {
+    /* background-color: #B0E0E6; Light blue on hover */
+    background-color: #D4A627;
+    color: #ffff;
+    font-weight: bold;
+  }
+  
+  .auth-buttons .signup:hover {
+    background-color: #D4A627;
+    color: #ffff;
+    font-weight: bold;
+  }
+  .auth-buttons .login:hover {
+    background-color: #D4A627;
+    color: #ffff;
+    font-weight: bold;
+  }
 
         h1 {
             text-align: center;
-            color: #D4A627; /* Complementary Gold Color for Heading */
+            color: #27374D; /* Complementary Gold Color for Heading */
             margin-bottom: 20px;
         }
 
         .section-heading {
-            color: #D4A627; /* Complementary Gold Color */
+            color: #27374D; /* Complementary Gold Color */
             font-size: 22px;
             margin: 20px 0;
         }
@@ -159,7 +234,34 @@
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo">
+          <img src="FIF.png" class="image" style="height:50px;"><h1 style="display: inline; margin-bottom: 50px;"> Feed Forward</h1>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="track.html">Tracks</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <!-- <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Support Us</a></li> -->
 
+          </ul>
+        </nav>
+
+        <!-- Common container for auth buttons and user image -->
+        <div class="auth-container">
+            <!-- Auth buttons for login and signup -->
+           
+
+            <!-- User image dropdown -->
+            <div class="dropdown">
+                <img src="user.png" class="user-image" id="userImage" alt="User Image"> 
+                
+            </div>
+        </div>
+    </header>
     <h1>Track Locations</h1>
 
     <!-- Section for Rajkot -->
